@@ -50,7 +50,7 @@ namespace SharpSiege
             {
                 Help();
             }
-            Console.Read();
+            //Console.Read();
             Logger.Close();
         }
 
@@ -63,7 +63,8 @@ namespace SharpSiege
             else
             {
                 Console.WriteLine("Missing README!");
-            }           
+            }
+            Console.Read();
         }
 
     }

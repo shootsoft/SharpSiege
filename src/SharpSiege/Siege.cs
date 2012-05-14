@@ -58,8 +58,8 @@ namespace SharpSiege
                 Console.Write(
 @"** SHARP SIEGE 0.1
 ** Preparing 1 concurrent users for battle.
-The server is now under sharpsiege...
-Lifting the server siege...      ");
+The server is now under sharp siege...
+Lifting the server sharp siege...      ");
                 watch.Start();
 
                 for (int i = 0; i < Retry; i++)
@@ -100,15 +100,17 @@ Lifting the server siege...      ");
                 }
                 watch.Stop();
                 Console.Write("Done"+Environment.NewLine);
-                Logger.Log("Total: " + watch.Elapsed);
-                Logger.Log("Requests: " + Retry);
-                Logger.Log("Requests Per Second: " + (Retry / watch.Elapsed.TotalSeconds).ToString("0.00"));
-                Logger.Log("Min Response Wait(ms): " + MinResponseWait);
-                Logger.Log("Max Response Wait(ms): " + MaxResponseWait);
-                Logger.Log("Read Bytes: " + LengthForamt.GetString(ByteReads));
-                Logger.Log("Success Count: " + SuccessCount);
-                Logger.Log("Failed Count: " + FailedCount);
-
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine("=============================");
+                sb.AppendLine("Total: " + watch.Elapsed);
+                sb.AppendLine("Requests: " + Retry);
+                sb.AppendLine("Requests Per Second: " + (Retry / watch.Elapsed.TotalSeconds).ToString("0.00"));
+                sb.AppendLine("Min Response Wait(ms): " + MinResponseWait);
+                sb.AppendLine("Max Response Wait(ms): " + MaxResponseWait);
+                sb.AppendLine("Read Bytes: " + LengthForamt.GetString(ByteReads));
+                sb.AppendLine("Success Count: " + SuccessCount);
+                sb.AppendLine("Failed Count: " + FailedCount);
+                Logger.Log(sb.ToString());
                 isRunning = false;
             }
         }
