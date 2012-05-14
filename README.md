@@ -1,4 +1,6 @@
-﻿Useage:
+﻿A http request testing tool like siege written in c#
+
+Useage:
 
 sharpsiege [-r 10] {-u url}
 
