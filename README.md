@@ -15,11 +15,11 @@ Example:
 
 TODO:
 	
-	* Mutiple clients	
-	* Mutiple URLs and random hits
-	* File input URLs
-	* TIMED testing
-	* Request timeout
-	* Request length
-	* Custom headers
-	* Custom user-agent
+* Mutiple clients	
+* Mutiple URLs and random hits
+* File input URLs
+* TIMED testing
+* Request timeout
+* Request length
+* Custom headers
+* Custom user-agent
